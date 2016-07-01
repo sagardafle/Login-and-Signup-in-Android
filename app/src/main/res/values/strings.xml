@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Login-SignupModules-Lab2-SagarDafle</string>
+    <string name="welcomemsg">Welcome to iFrugal!</string>
+    <string name="login">Log me in</string>
+    <string name="loginmsg">Log In</string>
+    <string name="emailid">Email </string>
+    <string name="userpassword">Password</string>
+    <string name="registeruser">Sign Up!</string>
 </resources>
