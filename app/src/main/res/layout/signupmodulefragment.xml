@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:weightSum="1">
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="205dp"
+        android:text="Sign up page will be designed here"
+        android:layout_marginTop="30dp"
+        android:layout_weight="0.58"/>
+</LinearLayout>

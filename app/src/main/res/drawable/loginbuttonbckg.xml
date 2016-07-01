@@ -5,7 +5,7 @@
     <item android:state_pressed="true"><shape android:shape="rectangle">
             <corners android:radius="3dp" />
 
-            <solid android:color="#EE7600" />
+            <solid android:color="@color/button_selectorcolor" />
         </shape></item>
 
     <!-- By default the background will be this item -->
