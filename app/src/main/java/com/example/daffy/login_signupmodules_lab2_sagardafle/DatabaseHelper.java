@@ -11,9 +11,9 @@ import android.util.Log;
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    SQLiteDatabase db;
+    static SQLiteDatabase db;
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "userdata.db";
     private static final String TABLE_NAME = "userdetails";
     private static final String COLUMN_ID = "id";
@@ -23,8 +23,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_AGE = "age";
     private static final String COLUMN_PASSWORD = "password";
 
-    private static final String CREATE_TABLE = "create table userdetails (id integer not null auto_increment," +
-            "fullname text not null , age integer not null, password text not null, mobileno text not null);" ;
+    private static final String CREATE_TABLE = "create table IF NOT EXISTS userdetails (id integer primary key not null , " +
+            "fullname text not null , emailid text not null, age integer not null, password text not null, mobileno text not null);" ;
 
 
     public DatabaseHelper(Context context){
@@ -71,7 +71,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String dropquery= "DROP TABLE IF EXISTS"+TABLE_NAME;
+        String dropquery= "DROP TABLE IF EXISTS "+TABLE_NAME;
         db.execSQL(dropquery);
         this.onCreate(db);
     }

@@ -9,6 +9,7 @@ import android.view.View;
  */
 public class SignUpActivity extends Activity {
     private static View loginview;
+    DatabaseHelper helper = new DatabaseHelper(this);
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);

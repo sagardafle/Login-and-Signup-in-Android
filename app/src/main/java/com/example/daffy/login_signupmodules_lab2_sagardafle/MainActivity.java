@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         helper = new DatabaseHelper(this);
         SQLiteDatabase sb = helper.getWritableDatabase();//this line responsible to call onCreate()
+        helper.onCreate(sb);
 
 
 

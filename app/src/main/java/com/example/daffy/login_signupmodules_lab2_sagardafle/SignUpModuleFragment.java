@@ -23,6 +23,7 @@ public class SignUpModuleFragment extends Fragment {
     private static FragmentManager registerfragmentManager;
 
 
+
     /**
      * Sign-up form fields
      */
@@ -48,28 +49,32 @@ public class SignUpModuleFragment extends Fragment {
             @Override
             public void onClick(View v) {
         Log.d("HEREEEE", " ++++");
-              validatefields();
-        UserData userdata = new UserData();
-                userdata.setFullname(fullName.getText().toString());
-                userdata.setEmailid(emailId.getText().toString());
-                userdata.setAge(Integer.parseInt(age.getText().toString()));
-                userdata.setMobile(mobileNumber.getText().toString());
-                userdata.setPassword(password.getText().toString());
+              boolean areFieldsValid = validatefields();
+                if(areFieldsValid) {
+                    Toast.makeText(getActivity(), "Successfully registered!!!",
+                            Toast.LENGTH_LONG).show();
 
-                Log.d("userdata.getFullname", userdata.getFullname());
-                Log.d("userdata.getEmailid", userdata.getEmailid());
-                Log.d("userdata.getAge", String.valueOf(userdata.getAge()));
-                Log.d("userdata.getMobile", userdata.getMobile());
-                Log.d("userdata.getPassword", userdata.getPassword());
+                    UserData userdata = new UserData();
+                    userdata.setFullname(fullName.getText().toString());
+                    userdata.setEmailid(emailId.getText().toString());
+                    userdata.setAge(Integer.parseInt(age.getText().toString()));
+                    userdata.setMobile(mobileNumber.getText().toString());
+                    userdata.setPassword(password.getText().toString());
 
+                    Log.d("userdata.getFullname", userdata.getFullname());
+                    Log.d("userdata.getEmailid", userdata.getEmailid());
+                    Log.d("userdata.getAge", String.valueOf(userdata.getAge()));
+                    Log.d("userdata.getMobile", userdata.getMobile());
+                    Log.d("userdata.getPassword", userdata.getPassword());
 
+                    SignUpActivity signupactivity = new SignUpActivity();
+                    signupactivity.helper.insertData(userdata);
 
-               // helper.insertData(userdata);
-
-//                registerfragmentManager
-//                        .beginTransaction()
-//                        .replace(R.id.frameContainer, new InitialSetupModuleFragment(),
-//                                "InitialSetup").commit();
+                registerfragmentManager
+                        .beginTransaction()
+                        .replace(R.id.fragment_container, new LoginModuleFragment(),
+                                "LoginModuleFragment").commit();
+                }
 
             }
         });
@@ -88,7 +93,7 @@ public class SignUpModuleFragment extends Fragment {
     }
 
     // Check Validation Method
-    private void validatefields() {
+    private boolean validatefields() {
 
         // Get all edittext texts
         String getFullName = fullName.getText().toString();
@@ -99,8 +104,8 @@ public class SignUpModuleFragment extends Fragment {
         String getConfirmPassword = confirmPassword.getText().toString();
 
         // Pattern match for email id
-        Pattern p = Pattern.compile("\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}\\b\"");
-        Matcher m = p.matcher(getEmailId);
+//        Pattern p = Pattern.compile("\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}\\b\"");
+//        Matcher m = p.matcher(getEmailId);
 
         // Check if all strings are null or not
         if (getFullName.equals("") || getFullName.length() == 0
@@ -112,23 +117,27 @@ public class SignUpModuleFragment extends Fragment {
                 || getConfirmPassword.length() == 0)
 
 
-        Toast.makeText(getActivity(), "All fields are required.)",
-                Toast.LENGTH_LONG).show();
+        {
+            Toast.makeText(getActivity(), "All fields are required.",
+                    Toast.LENGTH_LONG).show();
+            return false;
+        }
 
             // Check if email id valid or not
-        else if (!m.find())
-            Toast.makeText(getActivity(), "Email ID is invalid.",
-                    Toast.LENGTH_LONG).show();
-
+//        else if (!m.find()) {
+//            Toast.makeText(getActivity(), "Email ID is invalid.",
+//                    Toast.LENGTH_LONG).show();
+//            return false;
+//        }
             // Check if both password should be equal
-        else if (!getConfirmPassword.equals(getPassword))
-            Toast.makeText(getActivity(), "Passwords dont match!)",
+        else if (!getConfirmPassword.equals(getPassword)) {
+            Toast.makeText(getActivity(), "Passwords don't match!",
                     Toast.LENGTH_SHORT).show();
-
+            return false;
+        }
             // Else do signup or do your stuff
         else
-            Toast.makeText(getActivity(), "Do SignUp.", Toast.LENGTH_SHORT)
-                    .show();
+            return true;
 
     }
 }
