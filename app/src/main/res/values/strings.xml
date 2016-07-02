@@ -6,4 +6,16 @@
     <string name="emailid">Email </string>
     <string name="userpassword">Password</string>
     <string name="registeruser">Sign Up!</string>
+    <string name="userpassoword">Password</string>
+    <string name="userfullName">Full Name</string>
+    <string name="mobileNumber">Mobile Number</string>
+    <string name="location">Location</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="terms_conditions">By clicking SignUp you agree all the Terms and Conditions.</string>
+    <string name="signUp">SIGN UP</string>
+    <string name="already_user">Already have Account? Login here.</string>
+    <string name="registered_emailid">Please enter your Registered Email Id below:</string>
+    <string name="submit">SUBMIT</string>
+    <string name="back">BACK</string>
+    <string name="age">Age</string>
 </resources>

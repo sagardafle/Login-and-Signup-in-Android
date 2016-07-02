@@ -3,6 +3,12 @@
                 android:layout_height="fill_parent"
                 android:padding="20dp" >
 
+    <FrameLayout
+        android:id="@+id/loginframeContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+
     <LinearLayout
         android:background="#EE7600"
         android:id="@+id/login_layout"
@@ -41,7 +47,7 @@
         <View
             android:layout_width="fill_parent"
             android:layout_height="1px"
-            android:background="@color/white_greyish" />
+            android:background="@color/black" />
 
         <EditText
             android:id="@+id/login_password"
