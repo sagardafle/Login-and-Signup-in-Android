@@ -4,6 +4,7 @@
       <w>fetchuser</w>
       <w>fullname</w>
       <w>loginctivity</w>
+      <w>logoutdialog</w>
       <w>userfullname</w>
     </words>
   </dictionary>

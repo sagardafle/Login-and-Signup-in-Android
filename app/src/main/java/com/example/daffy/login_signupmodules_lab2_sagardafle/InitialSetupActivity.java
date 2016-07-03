@@ -41,12 +41,12 @@ public boolean onCreateOptionsMenu(Menu menu){
 
         if (id == R.id.logout_btn) {
 
-            AlertDialog.Builder logoutdialog = new AlertDialog.Builder(this);
-            logoutdialog.setTitle("Application Logout ");
-            logoutdialog.setMessage("Are you sure that you wish to logout?");
-            logoutdialog.setCancelable(true);
+            AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
+            builder1.setTitle("Application Logout ");
+            builder1.setMessage("Are you sure that you wish to logout?");
+            builder1.setCancelable(true);
 
-            logoutdialog.setPositiveButton(
+            builder1.setPositiveButton(
                     "Yes",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
@@ -54,7 +54,7 @@ public boolean onCreateOptionsMenu(Menu menu){
                         }
                     });
 
-            logoutdialog.setNegativeButton(
+            builder1.setNegativeButton(
                     "No",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
@@ -62,8 +62,15 @@ public boolean onCreateOptionsMenu(Menu menu){
                         }
                     });
 
-            AlertDialog alert11 = logoutdialog.create();
+            AlertDialog alert11 = builder1.create();
             alert11.show();
+
+
+
+
+//            Intent i = new Intent(this,LoginActivity.class);
+//            startActivity(i);
+//            finish();
         }
 
         return super.onOptionsItemSelected(item);
