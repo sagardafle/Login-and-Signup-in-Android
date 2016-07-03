@@ -1,9 +1,11 @@
 package com.example.daffy.login_signupmodules_lab2_sagardafle;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -39,11 +41,37 @@ public boolean onCreateOptionsMenu(Menu menu){
 
         if (id == R.id.logout_btn) {
 
-            Intent i = new Intent(this,LoginActivity.class);
-            startActivity(i);
-            finish();
+            AlertDialog.Builder logoutdialog = new AlertDialog.Builder(this);
+            logoutdialog.setTitle("Application Logout ");
+            logoutdialog.setMessage("Are you sure that you wish to logout?");
+            logoutdialog.setCancelable(true);
+
+            logoutdialog.setPositiveButton(
+                    "Yes",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            logout();
+                        }
+                    });
+
+            logoutdialog.setNegativeButton(
+                    "No",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                        }
+                    });
+
+            AlertDialog alert11 = logoutdialog.create();
+            alert11.show();
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void logout(){
+        Intent i = new Intent(this,LoginActivity.class);
+        startActivity(i);
+        finish();
     }
 }
