@@ -2,6 +2,7 @@ package com.example.daffy.login_signupmodules_lab2_sagardafle;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -13,7 +14,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     static SQLiteDatabase db;
 
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     private static final String DATABASE_NAME = "userdata.db";
     private static final String TABLE_NAME = "userdetails";
     private static final String COLUMN_ID = "id";
@@ -43,14 +44,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     public void insertData(UserData userdata){
-//        try{
-//            db = this.getWritableDatabase();
-//            Log.d("getWritable SUCCESS", "Yay");
-//        } catch (Exception e){
-//            Log.d("getWritable FAILURE", e.toString());
-//        }
-
-
         ContentValues values = new ContentValues();
         values.put(COLUMN_FULLNAME,userdata.getFullname());
         values.put(COLUMN_EMAILID,userdata.getEmailid());
@@ -64,13 +57,42 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         } catch (Exception e){
             Log.d("Insert FAILURE", e.toString());
         }
+        //db.close();
+    }
 
+    public boolean userExists(String emailid,String password){
+        //db = this.getReadableDatabase();
+        String fetchuser = "Select emailid,password from " +TABLE_NAME;
+        Cursor cursor = db.rawQuery(fetchuser, null);
+        String a,b = "not found";
+        Log.d("received emailid", emailid);
+        Log.d("Cursor count", String.valueOf(cursor.getCount()));
+        if(cursor.moveToFirst()){
+            Log.d("Select " , " clause");
+            do{
+                a= cursor.getString(0);
+                Log.d("a " , a);
+                if (a.equals(emailid)){
+                    Log.d("emailid  If loop" , a);
+                    b = cursor.getString(1);
+                    Log.d("b " , b);
+                    break;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                }
+            }
+            while(cursor.moveToNext());
+        }
+        if (b.equals(password)) {
+            Log.d("Returning "," true");
+            return true;
+        }
+        else return false;
 
     }
 
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
         String dropquery= "DROP TABLE IF EXISTS "+TABLE_NAME;
         db.execSQL(dropquery);
         this.onCreate(db);

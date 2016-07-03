@@ -8,7 +8,6 @@ import android.view.View;
  * Created by daffy on 7/1/16.
  */
 public class SignUpActivity extends Activity {
-    private static View loginview;
     DatabaseHelper helper = new DatabaseHelper(this);
     @Override
     protected void onCreate(Bundle savedInstanceState){

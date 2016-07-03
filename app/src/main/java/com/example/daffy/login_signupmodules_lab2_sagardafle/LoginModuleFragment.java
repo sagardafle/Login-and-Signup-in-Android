@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 
 /**
@@ -22,6 +24,7 @@ public class LoginModuleFragment extends Fragment {
     private static View loginview;
     private static Button loginbtn, registerbtn;
     private static FragmentManager loginfragmentManager;
+    private static EditText emailid,pass;
 
 
     public LoginModuleFragment() {
@@ -32,6 +35,33 @@ public class LoginModuleFragment extends Fragment {
                              Bundle savedInstanceState) {
         loginview = inflater.inflate(R.layout.loginfragment, container, false);
         loginfragmentManager = getActivity().getSupportFragmentManager();
+
+        loginbtn = (Button) loginview.findViewById (R.id.loginBtn);
+        loginbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("Login ", " clicked");
+                emailid = (EditText) loginview.findViewById(R.id.login_emailid);
+                pass = (EditText) loginview.findViewById(R.id.login_password);
+                Log.d("emailid ", emailid.getText().toString());
+                Log.d("pass ", pass.getText().toString());
+
+                LoginActivity loginctivity = new LoginActivity();
+
+                if(loginctivity.helper.userExists(emailid.getText().toString(),pass.getText().toString())){
+
+                    final FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    ft.replace(R.id.fragment_container, new InitialSetupModuleFragment(), "InitialModuleFragment");
+                    ft.commit();
+                } else{
+                    Toast.makeText(getActivity(), "Email and/or password don't match.",
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
+
         registerbtn = (Button) loginview.findViewById (R.id.signupBtn);
         registerbtn.setOnClickListener(new View.OnClickListener() {
             @Override

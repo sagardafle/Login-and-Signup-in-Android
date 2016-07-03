@@ -14,12 +14,12 @@ import android.app.Fragment;
  * Created by daffy on 7/1/16.
  */
 public class LoginActivity extends FragmentActivity {
-    private static View loginview;
+    DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.myfragmentcontainer);  //+++++++++++++++WORKING+++++++++++++++++++=
+        setContentView(R.layout.myfragmentcontainer);
 
         LoginModuleFragment loginmodulefragment = new LoginModuleFragment();
         getSupportFragmentManager().beginTransaction()
