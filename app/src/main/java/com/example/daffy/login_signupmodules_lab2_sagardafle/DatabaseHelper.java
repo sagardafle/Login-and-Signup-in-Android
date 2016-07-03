@@ -86,8 +86,37 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
         }
         else return false;
+    }
+
+
+
+
+    public String getUserName(String emailid){
+        //db = this.getReadableDatabase();
+        String fetchuser = "Select "+COLUMN_EMAILID+", "+COLUMN_FULLNAME+" from " +TABLE_NAME;
+        Cursor cursor = db.rawQuery(fetchuser, null);
+        String a,b = "not found";
+        Log.d("received emailid", emailid);
+        Log.d("Cursor count", String.valueOf(cursor.getCount()));
+        if(cursor.moveToFirst()){
+            Log.d("Select " , " clause");
+            do{
+                a= cursor.getString(0);
+                Log.d("a " , a);
+                if (a.equals(emailid)){
+                    Log.d("emailid  If loop" , a);
+                    b = cursor.getString(1);
+                    Log.d("b " , b);
+                    break;
+                }
+            }
+            while(cursor.moveToNext());
+        }
+        return b;
 
     }
+
+
 
 
     @Override

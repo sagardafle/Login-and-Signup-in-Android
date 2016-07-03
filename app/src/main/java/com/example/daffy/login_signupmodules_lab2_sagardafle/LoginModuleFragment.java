@@ -24,7 +24,7 @@ public class LoginModuleFragment extends Fragment {
     private static View loginview;
     private static Button loginbtn, registerbtn;
     private static FragmentManager loginfragmentManager;
-    private static EditText emailid,pass;
+    private static EditText emailid,pass,fullname;
 
 
     public LoginModuleFragment() {
@@ -41,6 +41,7 @@ public class LoginModuleFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Log.d("Login ", " clicked");
+
                 emailid = (EditText) loginview.findViewById(R.id.login_emailid);
                 pass = (EditText) loginview.findViewById(R.id.login_password);
                 Log.d("emailid ", emailid.getText().toString());
@@ -50,9 +51,16 @@ public class LoginModuleFragment extends Fragment {
 
                 if(loginctivity.helper.userExists(emailid.getText().toString(),pass.getText().toString())){
 
+                    String userfullname = loginctivity.helper.getUserName(emailid.getText().toString());
+                    Log.d("Retrieved userfullname", userfullname);
+                    Intent i = new Intent(getActivity(),InitialSetupActivity.class);
+                    i.putExtra("username", userfullname);
+                    startActivity(i);
+                    /*
                     final FragmentTransaction ft = getFragmentManager().beginTransaction();
                     ft.replace(R.id.fragment_container, new InitialSetupModuleFragment(), "InitialModuleFragment");
                     ft.commit();
+                    */
                 } else{
                     Toast.makeText(getActivity(), "Email and/or password don't match.",
                             Toast.LENGTH_LONG).show();

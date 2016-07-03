@@ -3,4 +3,11 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+         android:id="@+id/usernamefragment"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"/>
+
 </LinearLayout>

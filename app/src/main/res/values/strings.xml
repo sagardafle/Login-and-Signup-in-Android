@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Login-SignupModules-Lab2-SagarDafle</string>
+    <string name="app_name">Lab2-SagarDafle</string>
     <string name="welcomemsg">Welcome to iFrugal!</string>
     <string name="login">Log me in</string>
     <string name="loginmsg">Log In</string>
@@ -18,4 +18,5 @@
     <string name="submit">SUBMIT</string>
     <string name="back">BACK</string>
     <string name="age">Age</string>
+    <string name="logout">log out</string>
 </resources>
