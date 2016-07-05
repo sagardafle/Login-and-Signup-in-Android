@@ -21,7 +21,7 @@ import android.widget.Toast;
 
 
 public class LoginModuleFragment extends Fragment {
-    private static View loginview;
+    public static View loginview;
     private static Button loginbtn, registerbtn;
     private static FragmentManager loginfragmentManager;
     private static EditText emailid,pass,fullname;
@@ -82,6 +82,10 @@ public class LoginModuleFragment extends Fragment {
 
         return loginview;
     }
+
+
+
+
 
 
 }

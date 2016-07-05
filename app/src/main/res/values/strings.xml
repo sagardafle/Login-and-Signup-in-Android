@@ -19,4 +19,7 @@
     <string name="back">BACK</string>
     <string name="age">Age</string>
     <string name="logout">log out</string>
+    <string name="spinnersetup">Salary(monthly)</string>
+    <string name="recurringbills">Recurring Bills</string>
+    <string name="recurring_bills_add">Add bills </string>
 </resources>

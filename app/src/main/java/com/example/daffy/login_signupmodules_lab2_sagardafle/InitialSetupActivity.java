@@ -7,15 +7,24 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 /**
  * Created by daffy on 7/2/16.
  */
 public class InitialSetupActivity extends AppCompatActivity {
+    private ImageButton addbtn;
+    private EditText et1,et2;
+    public static View initialsetupview;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -23,6 +32,19 @@ public class InitialSetupActivity extends AppCompatActivity {
         TextView fullname = (TextView)findViewById(R.id.usernamefragment);
         fullname.setText("Welcome, " );
         fullname.append(getIntent().getStringExtra("username"));
+        addbtn = (ImageButton) findViewById(R.id.moreImageButton);
+        Log.d("addbtn ", addbtn.toString());
+        et1 = (EditText) findViewById(R.id.et1);
+        et2 = (EditText) findViewById(R.id.et2);
+        addbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("Ssdsad ", " asass");
+                et1.setVisibility(View.VISIBLE);
+                et2.setVisibility(View.VISIBLE);
+            }
+        });
+
     }
 
     //rest of app
