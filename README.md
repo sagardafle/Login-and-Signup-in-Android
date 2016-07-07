@@ -97,7 +97,7 @@ This is a part of the SignUpActivity. The sign up fragment consists of component
 login screen. User will however, get a toast notification saying that the registration was
 successful.
 
-9. Finally, user can register with the credentials he has inserted.
+9.Finally, user can register with the credentials he has inserted.
 
 10.**Intent#2- InitialSetupActivity(Explicit)**
 When the user logs in successfully, it is essential to get certain user records (username in this
