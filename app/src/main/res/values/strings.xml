@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Lab2-SagarDafle</string>
-    <string name="welcomemsg">Welcome to iFrugal!</string>
+    <string name="welcomemsg">Welcome to SmartSaver!</string>
     <string name="login">Log me in</string>
     <string name="loginmsg">Log In</string>
     <string name="emailid">Email </string>
@@ -11,10 +11,7 @@
     <string name="mobileNumber">Mobile Number</string>
     <string name="location">Location</string>
     <string name="confirmPassword">Confirm Password</string>
-    <string name="terms_conditions">By clicking SignUp you agree all the Terms and Conditions.</string>
     <string name="signUp">SIGN UP</string>
-    <string name="already_user">Already have Account? Login here.</string>
-    <string name="registered_emailid">Please enter your Registered Email Id below:</string>
     <string name="submit">SUBMIT</string>
     <string name="back">BACK</string>
     <string name="age">Age</string>

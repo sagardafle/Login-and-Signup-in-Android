@@ -24,11 +24,9 @@ public class LoginActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.myfragmentcontainer);
 
-
         LoginModuleFragment loginmodulefragment = new LoginModuleFragment();
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.fragment_container, loginmodulefragment).commit();
-
 
 }
 

@@ -2,20 +2,32 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
-<LinearLayout
-    android:layout_width="230dp"
-    android:layout_height="350dp"
+
+    <LinearLayout
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="10dp"
+    android:layout_width="380dp"
+    android:layout_height="280dp"
     android:orientation="vertical"
     android:gravity="center"
-    android:layout_centerVertical="true"
-    android:layout_centerHorizontal="true"
     android:weightSum="1"
     android:background="#7e9d00"
     android:id="@+id/linearLayout">
 
 
-    <EditText
-        android:layout_marginTop="-70dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/usernamefragment"
+            android:layout_marginTop="-60dp"
+            android:typeface ="sans"
+            android:textStyle="bold"
+            android:paddingTop="-190dp"
+            android:paddingLeft="5dp"
+            android:layout_alignParentBottom="true"/>
+
+        <EditText
+        android:layout_marginTop="-10dp"
         android:paddingLeft="20dp"
         android:id="@+id/salarysetup"
         android:layout_width="178dp"
@@ -47,7 +59,7 @@
     <ImageButton
         android:id="@+id/moreImageButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:clickable="true"
@@ -58,32 +70,19 @@
         android:id="@+id/et1"
         android:layout_marginTop="20dp"
         android:visibility="gone"
-        android:layout_width="120dp"
-        android:layout_height="30dp"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
         android:background="@drawable/billseditext"/>
     <EditText
         android:layout_marginTop="3dp"
+        android:layout_marginBottom="-13dp"
         android:id="@+id/et2"
         android:visibility="gone"
-        android:layout_width="120dp"
-        android:layout_height="30dp"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
         android:background="@drawable/billseditext"/>
 
 </LinearLayout>
 
-    <TextView
-        android:layout_width="70dp"
-        android:layout_height="30dp"
-        android:id="@+id/usernamefragment"
-        android:typeface ="sans"
-        android:textStyle="bold"
-        android:layout_weight="0.29"
-        android:paddingTop="90dp"
-        android:paddingLeft="30dp"
-        android:layout_alignRight="@+id/linearLayout"
-        android:layout_alignEnd="@+id/linearLayout"
-        android:layout_alignLeft="@+id/linearLayout"
-        android:layout_alignStart="@+id/linearLayout"
-        android:layout_above="@+id/linearLayout"
-        android:layout_alignParentTop="true"/>
+
 </RelativeLayout>

@@ -10,7 +10,7 @@
         />
 
     <LinearLayout
-        android:background="#FFA500"
+        android:background="#7e9d00"
         android:id="@+id/login_layout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="@string/welcomemsg"
-            android:textColor="@color/black"
+            android:textColor="#fff"
             android:textSize="25sp"
             android:textStyle="bold"
             android:typeface ="sans"/>
@@ -42,8 +42,8 @@
             android:hint="@string/emailid"
             android:inputType="textEmailAddress"
             android:padding="10dp"
-            android:textColor="#000"
-            android:textColorHint="#000"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             android:textSize="16sp"
             android:typeface ="sans"/>
 
@@ -64,10 +64,15 @@
             android:hint="@string/userpassword"
             android:inputType="textPassword"
             android:padding="10dp"
-            android:textColor="#000"
-            android:textColorHint="#000"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             android:textSize="16sp"
             android:typeface ="sans"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="15px"
+            android:background="@color/white" />
 
 
         <Button
@@ -78,7 +83,7 @@
             android:background="@drawable/loginbuttonbckg"
             android:padding="3dp"
             android:text="@string/login"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="17sp"
             android:textStyle="bold"
             android:typeface ="sans"
@@ -87,6 +92,10 @@
             android:layout_width="fill_parent"
             android:layout_height="1px"
             android:background="@color/black" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10px"
+            android:background="@color/white" />
 
         <Button
             android:id="@+id/signupBtn"
@@ -96,7 +105,7 @@
             android:background="@drawable/signupbuttonbckg"
             android:padding="3dp"
             android:text="@string/registeruser"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="17sp"
             android:textStyle="bold"
             android:typeface ="sans"/>
