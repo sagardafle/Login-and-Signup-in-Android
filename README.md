@@ -126,15 +126,15 @@ case, the activity is finished and the user is redirected back to the login page
 **Screenshots of the application:**
 Below are the screenshots of the application from the Nexus emulator.
 
-![Alt text](/Screengrabs/Log%20in%20page.png?raw=true "The log in page")
+<img src="https://github.com/sagardafle/Login-and-Signup-in-Android/blob/master/Screengrabs/Log%20in%20page.png" width="300" height="400" style="max-width:100%;">
 
-![Alt text](/Screengrabs/Sign%20Up%20page.png?raw=true "The sign up page")
+<img src="https://github.com/sagardafle/Login-and-Signup-in-Android/blob/master/Screengrabs/Sign%20Up%20page.png" width="300" height="400" style="max-width:100%;">
 
-![Alt text](/Screengrabs/ToastMessageSignup.png?raw=true "ToastMessage error Signup.png")
+<img src="https://github.com/sagardafle/Login-and-Signup-in-Android/blob/master/Screengrabs/ToastMessageSignup.png" width="300" height="400" style="max-width:100%;">
 
-![Alt text](/Screengrabs/Successfully%20Registered.png?raw=true "Successfully Registered toast message.png")
+<img src="https://github.com/sagardafle/Login-and-Signup-in-Android/blob/master/Screengrabs/Successfully%20Registered.png" width="300" height="400" style="max-width:100%;">
 
-![Alt text](/Screengrabs/WelcomeMessage.png?raw=true "Welcome Message.png")
+<img src="https://github.com/sagardafle/Login-and-Signup-in-Android/blob/master/Screengrabs/WelcomeMessage.png" width="300" height="400" style="max-width:100%;">
 
-![Alt text](/Screengrabs/LogoutDialog.png?raw=true "Logout Dialog.png")
+<img src="https://github.com/sagardafle/Login-and-Signup-in-Android/blob/master/Screengrabs/LogoutDialog.png" width="300" height="400" style="max-width:100%;">
 
