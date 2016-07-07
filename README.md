@@ -88,13 +88,13 @@ This is a part of the SignUpActivity. The sign up fragment consists of component
 - The database name is *userdata.db* and the table name is *userdetails*.
 - The database file can be located via the Android Device monitor as below: 
 - 
-<img src="https://github.com/sagardafle/Login-and-Signup-in-Android/blob/master/Screengrabs/db%20file%20location.png" width="300" height="400" style="max-width:100%;">
+<img src="https://github.com/sagardafle/Login-and-Signup-in-Android/blob/master/Screengrabs/database/db%20file%20location.png" width="600" height="300" style="max-width:100%;">
 
 - **The table schema**
-<img src="https://github.com/sagardafle/Login-and-Signup-in-Android/blob/master/Screengrabs/table%20schema.png" width="300" height="400" style="max-width:100%;">
+<img src="https://github.com/sagardafle/Login-and-Signup-in-Android/blob/master/Screengrabs/database/table%20schema.png" width="600" height="300" style="max-width:100%;">
 
 - **Table data**
-- <img src="https://github.com/sagardafle/Login-and-Signup-in-Android/blob/master/Screengrabs/table%20data.png" width="300" height="400" style="max-width:100%;">
+- <img src="https://github.com/sagardafle/Login-and-Signup-in-Android/blob/master/Screengrabs/database/table%20data.png" width="600" height="300" style="max-width:100%;">
 
 8.Once user signs up, the user data is stored in the database and user is redirected back to the
 login screen. User will however, get a toast notification saying that the registration was
