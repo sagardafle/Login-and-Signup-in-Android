@@ -87,13 +87,14 @@ This is a part of the SignUpActivity. The sign up fragment consists of component
 - This data includes the user fullname, password, age, emailed and the contact number. When the user tries to login, a select query is triggered by the LoginActivity which in turn check if the user exists in the database and displays next screen accordingly. 
 - The database name is *userdata.db* and the table name is *userdetails*.
 - The database file can be located via the Android Device monitor as below: 
-![Alt text](/Screengrabs/database/db%20file%20location.png?raw=true "Locating database in Android monitor")
+- 
+<img src="https://github.com/sagardafle/Login-and-Signup-in-Android/blob/master/Screengrabs/db%20file%20location.png" width="300" height="400" style="max-width:100%;">
 
 - **The table schema**
-![Alt text](/Screengrabs/database/table%20schema.png?raw=true "The user details table schema")
+<img src="https://github.com/sagardafle/Login-and-Signup-in-Android/blob/master/Screengrabs/table%20schema.png" width="300" height="400" style="max-width:100%;">
 
 - **Table data**
-![Alt text](/Screengrabs/database/table%20data.png?raw=true "The user detals table data")
+- <img src="https://github.com/sagardafle/Login-and-Signup-in-Android/blob/master/Screengrabs/table%20data.png" width="300" height="400" style="max-width:100%;">
 
 8.Once user signs up, the user data is stored in the database and user is redirected back to the
 login screen. User will however, get a toast notification saying that the registration was
